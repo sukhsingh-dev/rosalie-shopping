@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --header-height: 6.5rem;
-  --primary: #743be7;
+  --primary: #4DD7C0;
 }
 
 @theme inline {
@@ -22,12 +22,39 @@
   }
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-family: var(--font-main), sans-serif;
+
+  @media (max-width: 1024px) {
+    -webkit-overflow-scrolling: touch;
+  }
+
 }
 
 .video-gradient {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.product-list {
+  .product-card {
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    &:nth-child(5) {
+      @media (min-width: 1024px) {
+        display: block;
+      }
+    }
+  }
 }

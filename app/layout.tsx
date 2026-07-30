@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Alan_Sans } from "next/font/google";
 import Header from "./shared/components/Header";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const alanSans = Alan_Sans({
+  variable: "--font-main",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -26,9 +21,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${alanSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white">
+      <body className="min-h-full bg-white before:content-[''] before:fixed before:inset-0 before:z-[-1] before:bg-[url('/images/bg-1.webp')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-50">
         <Header />
         {children}
       </body>

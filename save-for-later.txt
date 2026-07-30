@@ -1,0 +1,27 @@
+/* Gradient Button  */
+.button {
+  display: inline-flex;
+  position: relative;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-shadow: 0 0px 3px #005d3e;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 -12px 0 0;
+    z-index: -1;
+    transform: skew(-24deg);
+    border-radius: 12px 8px 12px 8px;
+    outline: 1px solid #86e2d6;
+    outline-offset: 3px;
+    font-weight: 700;
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-right: 12px;
+    background: linear-gradient(180deg, #4DD7C0 0%, rgba(77, 215, 192, 0.6) 51.86%, #2BB49D 100%);
+  }
+}
