@@ -13,7 +13,7 @@ const ProductCard = ({ productInfo }: { productInfo: Product }) => {
                     width={250}
                     height={275}
                     quality={100}
-                    className="transition-transform duration-150 group-hover:scale-[1.05] aspect-[1/1.1] rounded-2xl md:rounded-[20px] object-cover w-full"
+                    className="transition-transform duration-500 group-hover:scale-105 aspect-[1/1.1] rounded-2xl md:rounded-[20px] object-cover w-full"
                 />
             </div>
             <div className="px-2 mt-2">
