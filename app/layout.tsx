@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { Alan_Sans } from "next/font/google";
+import { Jost, Anton } from "next/font/google";
 import Header from "./shared/components/Header";
 import "./globals.css";
 
-const alanSans = Alan_Sans({
-  variable: "--font-main",
-  adjustFontFallback: false,
+const anton = Anton({
+  weight: "400",
+  variable: "--font-anton",
 });
+
+const jost = Jost({
+  variable: "--font-jost",
+});
+
 
 export const metadata: Metadata = {
   title: "Rosalie Shopping",
@@ -21,9 +26,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${alanSans.variable} h-full antialiased`}
+      className={`${jost.variable} ${anton.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white before:content-[''] before:fixed before:inset-0 before:z-[-1] before:bg-[url('/images/bg-1.webp')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-50">
+      <body className="min-h-full bg-[#FFF5F6]">
         <Header />
         {children}
       </body>

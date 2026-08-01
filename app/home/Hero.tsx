@@ -1,12 +1,32 @@
+import Image from "next/image";
+import Link from "next/link";
+import { RiArrowRightUpLongLine } from "react-icons/ri";
+
+Image
 const HeroSection = () => {
     return (
-        <div className="video-overlay relative">
-            <video className="w-full object-cover aspect-[1/1.4] -mt-(--header-height) sm:aspect-16/7 sm:object-top rounded-b-3xl md:rounded-b-[28px]" muted autoPlay loop preload="auto">
-                <source src="/desk-vid.mp4" type="video/mp4" media="(min-width: 640px)" />
-                <source src="/mob-vid.mp4" type="video/mp4" />
-            </video>
-            <div className="video-gradient z-1 absolute top-0 left-0 right-0 bottom-0 rounded-b-3xl md:rounded-b-[28px]" />
-        </div>
+        <section className="max-w-360 mx-auto px-4 py-8">
+            <h1 className="text-primary font-secondary font-bold text-[120px] text-center uppercase">Elevate Your Everyday</h1>
+            <div className="max-w-165 mx-auto -mt-30 relative">
+                <Image
+                    width={660}
+                    height={537}
+                    quality={100}
+                    alt=""
+                    src="/images/hero-new.webp"
+                />
+
+                <div className="absolute bottom-20 -right-1/3 font-secondary text-secondary text-[52px] uppercase leading-[1.2] w-max">
+                    comfort <span className="text-tertiary">&</span><br /> contemporary
+                </div>
+                <div className="absolute bottom-20 -left-1/3  max-w-90">
+                    <p className="text-[16px] mix-blend-difference text-white font-light">
+                        We craft durable, ultra-soft hoodies and breathable <br />t-shirts designed to keep you looking effortlessly stylish, whatever the weather.
+                    </p>
+                    <Link href="/shop" className="text-white uppercase mt-4 inline-flex font-medium px-4 py-2 bg-page-dark gap-3 items-center" >Shop the Collection <RiArrowRightUpLongLine className="-mt-0.5" /></Link>
+                </div>
+            </div>
+        </section>
     )
 }
 
