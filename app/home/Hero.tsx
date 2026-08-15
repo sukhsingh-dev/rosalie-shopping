@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightUpLongLine } from "react-icons/ri";
 
-Image
 const HeroSection = () => {
     return (
         <section className="max-w-360 mx-auto px-4 py-8">

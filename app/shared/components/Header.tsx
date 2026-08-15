@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { CiShoppingCart, CiMenuFries, CiSearch } from "react-icons/ci";
 
 const Header = () => {
     const linkClass = "inline-block relative before:content-[''] before:absolute before:-bottom-0.5 before:w-0 before:h-0.5 before:bg-page-dark before:transition-[width] before:duration-300 hover:before:w-full before:transition-origin-right";
