@@ -47,10 +47,10 @@ const Marquee = () => {
             ref={containerRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="w-full my-8 overflow-hidden select-none"
+            className="w-full py-4 overflow-hidden select-none"
             aria-label="Brand highlights marquee"
         >
-            <div className="overflow-hidden whitespace-nowrap flex w-full py-4 bg-page-dark shadow-md">
+            <div className="overflow-hidden whitespace-nowrap flex w-full py-4 bg-secondary shadow-md">
                 <div ref={line2Ref} className="flex shrink-0 w-max will-change-transform">
                     {/* Duplicate 1 */}
                     <div className="flex items-center gap-8 sm:gap-12 pr-8 sm:pr-12">
@@ -62,7 +62,7 @@ const Marquee = () => {
                                 <span>
                                     {item}
                                 </span>
-                                <span className="inline-block px-2 py-1 text-xs font-main font-semibold tracking-widest bg-tertiary text-white uppercase">
+                                <span className="inline-block px-2 py-1 text-xs font-main font-semibold tracking-widest bg-page-dark text-white uppercase">
                                     Rosalie
                                 </span>
                             </span>
@@ -78,7 +78,7 @@ const Marquee = () => {
                                 <span>
                                     {item}
                                 </span>
-                                <span className="inline-block px-2 py-1 text-xs font-main font-semibold tracking-widest bg-tertiary text-white uppercase">
+                                <span className="inline-block px-2 py-1 text-xs font-main font-semibold tracking-widest bg-page-dark text-white uppercase">
                                     Rosalie
                                 </span>
                             </span>
