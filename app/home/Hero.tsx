@@ -17,9 +17,9 @@ const HeroSection = () => {
                     loading="eager"
                 />
 
-                {/* <div className="absolute bottom-20 -right-1/3 font-secondary text-white mix-blend-difference text-[52px] uppercase leading-[1.2] w-max">
+                <div className="absolute bottom-20 -right-1/3 font-secondary text-secondary text-[52px] uppercase leading-[1.2] w-max">
                     comfort &<br /> contemporary
-                </div> */}
+                </div>
                 <div className="absolute bottom-20 -left-1/3  max-w-90">
                     <p className="text-[14px] mix-blend-difference text-white/70 font-normal tracking-wider leading-relaxed">
                         We craft durable, ultra-soft hoodies and breathable <br />t-shirts designed to keep you looking effortlessly stylish, whatever the weather.

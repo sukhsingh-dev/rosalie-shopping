@@ -4,10 +4,10 @@
   --background: #ffffff;
   --foreground: #171717;
   --header-height: 6.5rem;
-  --primary: #9f022d;
-  --secondary: #ff2e58;
+  --primary: #f00a59;
+  --secondary: #ff0036;
   --secondary-light: #FCDDE3;
-  --tertiary: #ff218e;
+  --tertiary: #ff00b1;
   --page-dark: #17141C;
 }
 
@@ -42,4 +42,26 @@ body {
     -webkit-overflow-scrolling: touch;
   }
 
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c5bdbf;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(23, 20, 28, 0.75);
+  border-radius: 10px;
+  border: 2px solid #c5bdbf;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(23, 20, 28, 1);
 }

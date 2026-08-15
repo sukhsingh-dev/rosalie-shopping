@@ -14,7 +14,7 @@ const jost = Jost({
 
 
 export const metadata: Metadata = {
-  title: "Rosalie Shopping",
+  title: "Rosalie Fashion",
   description: "Shop your favorite products at unbeatable prices.",
 };
 

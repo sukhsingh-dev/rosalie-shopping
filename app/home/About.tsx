@@ -17,7 +17,7 @@ const AboutSection = () => {
                     alt="Rosalie Parisian Elegance"
                     width={600}
                     height={400}
-                    objectFit="cover"
+                    className="shadow-lg object-cover"
                 />
 
                 <div>
@@ -32,7 +32,7 @@ const AboutSection = () => {
                     </p>
 
                     <Link
-                        href="/about"
+                        href="/shop"
                         className="inline-flex items-center gap-3 bg-page-dark text-white uppercase text-xs font-semibold px-6 py-3.5 tracking-widest transition-all duration-300 hover:bg-tertiary group"
                     >
                         <span>DISCOVER MORE</span>

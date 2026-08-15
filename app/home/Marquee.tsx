@@ -50,7 +50,7 @@ const Marquee = () => {
             className="w-full py-4 overflow-hidden select-none"
             aria-label="Brand highlights marquee"
         >
-            <div className="overflow-hidden whitespace-nowrap flex w-full py-4 bg-secondary shadow-md">
+            <div className="overflow-hidden whitespace-nowrap flex w-full py-4 bg-primary shadow-md">
                 <div ref={line2Ref} className="flex shrink-0 w-max will-change-transform">
                     {/* Duplicate 1 */}
                     <div className="flex items-center gap-8 sm:gap-12 pr-8 sm:pr-12">
