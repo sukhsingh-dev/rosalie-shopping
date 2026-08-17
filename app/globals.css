@@ -16,6 +16,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
   --color-page-dark: var(--page-dark);
   --color-tertiary: var(--tertiary);
   --font-main: var(--font-jost);
@@ -46,6 +47,136 @@ body {
 
 button {
   cursor: pointer;
+}
+
+/* Preloader (the loading.tsx Suspense fallback).
+   Pure CSS on purpose: React does not run effects for a server-streamed fallback,
+   so a JS-driven timeline would sit frozen on a first page load. Keyframes animate
+   straight out of the streamed HTML, before any hydration. */
+@keyframes rosalie-draw {
+
+  0%,
+  4% {
+    stroke-dashoffset: 4000;
+    opacity: 1;
+  }
+
+  45% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  /* Recede while the letters cascade in over the top, then take back over. */
+  56%,
+  84% {
+    stroke-dashoffset: 0;
+    opacity: 0.35;
+  }
+
+  90% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: -4000;
+    opacity: 1;
+  }
+}
+
+@keyframes rosalie-letter {
+
+  0%,
+  44% {
+    opacity: 0;
+    transform: translateY(10%) scale(0.94);
+  }
+
+  52% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  72% {
+    opacity: 1;
+    transform: none;
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+    transform: translateY(-7%) scale(1.02);
+  }
+}
+
+@keyframes rosalie-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(300%);
+  }
+}
+
+@keyframes rosalie-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rosalie-draw {
+  /* SVG restarts the dash pattern on every subpath, and this wordmark has 16 (each
+     letter, each counter, the rose). So the dash is sized to the LONGEST subpath
+     (~3,959 units), not the 14,993-unit total — otherwise most subpaths sit mid-gap
+     and the mark draws as scattered fragments. All 16 now trace in unison. */
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: rosalie-draw 3.6s ease-in-out infinite;
+}
+
+.rosalie-letter {
+  /* fill-box keeps each letter's scale and lift centred on itself, not on the
+     whole viewBox, so the cascade reads as individual letters settling. */
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: rosalie-letter 3.6s ease-in-out infinite;
+}
+
+.rosalie-sweep {
+  animation: rosalie-sweep 1.6s ease-in-out infinite;
+}
+
+.rosalie-word {
+  animation: rosalie-fade-up 0.6s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rosalie-draw,
+  .rosalie-letter,
+  .rosalie-sweep,
+  .rosalie-word {
+    animation: none;
+  }
+
+  /* Settle on the finished frame: filled wordmark, no motion. */
+  .rosalie-draw {
+    stroke-dashoffset: 0;
+    opacity: 0.35;
+  }
+
+  .rosalie-letter {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Native cursor is hidden only once the custom one is mounted and the device

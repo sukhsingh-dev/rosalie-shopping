@@ -3,8 +3,12 @@ import Marquee from "./home/Marquee";
 import AboutSection from "./home/About";
 import ProductList from "./shared/components/ProductList";
 import { PRODUCTS } from "./shared/mockData";
+import { holdPreloader } from "./shared/holdPreloader";
 
-export default function Home() {
+export default async function Home() {
+  // Keeps the loading.tsx preloader on screen long enough to be seen.
+  await holdPreloader();
+
   return (
     <main>
       <HeroSection />
