@@ -24,7 +24,7 @@ const HeroSection = () => {
                     <p className="text-[14px] mix-blend-difference text-white/70 font-normal tracking-wider leading-relaxed">
                         We craft durable, ultra-soft hoodies and breathable <br />t-shirts designed to keep you looking effortlessly stylish, whatever the weather.
                     </p>
-                    <Link href="/shop" className="text-white uppercase mt-8 inline-flex text-xs font-semibold px-6 py-3.5 tracking-widest bg-page-dark gap-3 items-center group transition-all duration-300 hover:bg-tertiary" >Shop the Collection <RiArrowRightUpLongLine className="inline-flex -mt-0.5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" /></Link>
+                    <Link href="/shop" data-cursor-label="Shop" className="text-white uppercase mt-8 inline-flex text-xs font-semibold px-6 py-3.5 tracking-widest bg-page-dark gap-3 items-center group transition-all duration-300 hover:bg-tertiary" >Shop the Collection <RiArrowRightUpLongLine className="inline-flex -mt-0.5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" /></Link>
                 </div>
             </div>
         </section>

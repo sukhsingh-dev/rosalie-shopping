@@ -48,6 +48,16 @@ button {
   cursor: pointer;
 }
 
+/* Native cursor is hidden only once the custom one is mounted and the device
+   actually has a fine pointer, so keyboard/touch users are never left without one. */
+@media (hover: hover) and (pointer: fine) {
+
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

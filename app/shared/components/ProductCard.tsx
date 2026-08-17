@@ -5,9 +5,9 @@ import { RiArrowRightLongLine, RiHeart2Line } from "react-icons/ri";
 
 const ProductCard = ({ productInfo }: { productInfo: Product }) => {
     return (
-        <Link href="/product-details" className="grid grid-rows-[auto_1fr] group/card border border-slate-300 overflow-hidden">
+        <Link href="/product-details" data-cursor-label="View" className="grid grid-rows-[auto_1fr] group/card border border-slate-300 overflow-hidden">
             <div className="overflow-hidden w-full relative">
-                <div className="absolute right-4 top-4 z-1 text-tertiary [@media(hover:hover)]:opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"><RiHeart2Line size={24} /></div>
+                <button data-cursor-label="Add to Wishlist" className="absolute right-4 top-4 z-1 text-tertiary [@media(hover:hover)]:opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"><RiHeart2Line size={24} /></button>
                 <Image
                     src={productInfo.image}
                     alt="product image"
@@ -22,7 +22,7 @@ const ProductCard = ({ productInfo }: { productInfo: Product }) => {
                     <span className="text-[14px] md:text-[16px] text-black/90 line-clamp-2">{productInfo.title}</span>
                     <span className="text-secondary mt-1">£{productInfo.price}</span>
                 </div>
-                <button className="inline-flex items-center gap-2 text-sm py-1.5 px-2.5 bg-page-dark text-white font-medium group/button hover:bg-tertiary transition-colors duration-300 tracking-widest text-[12px]">ADD<RiArrowRightLongLine className="transition-transform duration-300 group-hover/button:translate-x-1" /></button>
+                <button data-cursor-label="Add to bag" className="inline-flex items-center gap-2 text-sm py-1.5 px-2.5 bg-page-dark text-white font-medium group/button hover:bg-tertiary transition-colors duration-300 tracking-widest text-[12px]">ADD<RiArrowRightLongLine className="transition-transform duration-300 group-hover/button:translate-x-1" /></button>
             </div>
         </Link>
     )

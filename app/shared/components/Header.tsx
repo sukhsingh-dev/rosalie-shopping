@@ -28,7 +28,7 @@ const Header = () => {
                         Wishlist
                     </li>
                     <li>
-                        <button className="py-1 px-2.5 text-white relative before:content-[''] before:absolute before:inset-0 before:bg-tertiary before:z-[-1] before:skew-x-[-20deg]">
+                        <button data-cursor-label="Bag" className="py-1 px-2.5 text-white relative before:content-[''] before:absolute before:inset-0 before:bg-tertiary before:z-[-1] before:skew-x-[-20deg]">
                             BAG 0
                         </button>
                     </li>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost, Anton } from "next/font/google";
 import Header from "./shared/components/Header";
+import CustomCursor from "./shared/components/CustomCursor";
 import "./globals.css";
 
 const anton = Anton({
@@ -29,6 +30,7 @@ export default function RootLayout({
       className={`${jost.variable} ${anton.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[#FFF5F6]">
+        <CustomCursor />
         <Header />
         {children}
       </body>

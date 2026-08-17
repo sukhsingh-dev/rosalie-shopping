@@ -33,6 +33,7 @@ const AboutSection = () => {
 
                     <Link
                         href="/shop"
+                        data-cursor-label="Discover"
                         className="inline-flex items-center gap-3 bg-page-dark text-white uppercase text-xs font-semibold px-6 py-3.5 tracking-widest transition-all duration-300 hover:bg-tertiary group"
                     >
                         <span>DISCOVER MORE</span>
