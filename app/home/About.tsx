@@ -6,7 +6,7 @@ const AboutSection = () => {
     return (
         <section className="max-w-360 mx-auto px-4 py-16 overflow-hidden">
             <div className="grid grid-cols-3 gap-12 items-center">
-                <h2 className="self-end font-secondary uppercase text-white mix-blend-difference text-6xl sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[116px] 2xl:text-[130px] tracking-tight">
+                <h2 className="font-secondary uppercase text-white mix-blend-difference text-6xl sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[110px] tracking-tight">
                     <span className="whitespace-nowrap">THE FOUNDATION</span>
                     <br />
                     <span className="whitespace-nowrap">OF CRAFT</span>

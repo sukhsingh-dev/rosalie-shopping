@@ -8,9 +8,9 @@ export interface ProductListProps {
 export interface Product {
     id: string;
     title: string;
-    category: 't-shirts' | 'hoodies';
+    category?: 't-shirts' | 'hoodies';
     price: number;
     image: string;
-    sizes: string[];
-    description: string;
+    sizes?: string[];
+    description?: string;
 }
