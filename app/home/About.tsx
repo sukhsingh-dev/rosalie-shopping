@@ -4,12 +4,14 @@ import { RiArrowRightUpLongLine } from "react-icons/ri";
 
 const AboutSection = () => {
     return (
-        <section className="max-w-360 mx-auto px-4 py-16 overflow-hidden">
-            <div className="grid grid-cols-3 gap-12 items-center">
-                <h2 className="font-secondary uppercase text-white mix-blend-difference text-6xl sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[110px] tracking-tight">
-                    <span className="whitespace-nowrap">THE FOUNDATION</span>
+        <section className="max-w-360 mx-auto px-4 py-12 lg:py-16 overflow-hidden">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-12 items-center">
+                {/* nowrap is what lets the type run past its column and over the
+                    image at lg+; below that it has to wrap to stay on screen. */}
+                <h2 className="font-secondary uppercase text-white mix-blend-difference text-[clamp(2.5rem,13vw,5.5rem)] lg:text-[96px] xl:text-[110px] tracking-tight">
+                    <span className="lg:whitespace-nowrap">THE FOUNDATION</span>
                     <br />
-                    <span className="whitespace-nowrap">OF CRAFT</span>
+                    <span className="lg:whitespace-nowrap">OF CRAFT</span>
                 </h2>
 
                 <Image
@@ -17,7 +19,8 @@ const AboutSection = () => {
                     alt="Rosalie Parisian Elegance"
                     width={600}
                     height={400}
-                    className="shadow-lg object-cover"
+                    sizes="(max-width: 1023px) 100vw, 33vw"
+                    className="shadow-lg object-cover w-full h-auto"
                 />
 
                 <div>

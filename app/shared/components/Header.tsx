@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeaderSearchBar from "./HeaderSearchBar";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
     const linkClass = "inline-block transition-colors duration-150 hover:text-tertiary";
@@ -7,14 +8,19 @@ const Header = () => {
     return (
         <header className="border-b border-slate-300">
             <nav className="relative max-w-360 mx-auto px-4 py-2" >
-                <ul className="flex flex-wrap gap-10 items-center uppercase text-sm font-medium text-page-dark">
-                    <li>
+                {/* One list across all sizes: the link items drop out below lg and
+                    move into the drawer, so there is no duplicated markup. */}
+                <ul className="flex gap-4 sm:gap-6 lg:gap-10 items-center uppercase text-sm font-medium text-page-dark">
+                    <li className="lg:hidden">
+                        <MobileMenu />
+                    </li>
+                    <li className="hidden lg:block">
                         <Link href="/shop" className={linkClass}>Shop</Link>
                     </li>
-                    <li>
+                    <li className="hidden lg:block">
                         <Link href="/about" className={linkClass}>About</Link>
                     </li>
-                    <li>
+                    <li className="hidden lg:block">
                         <Link href="/faq" className={linkClass}>Faq</Link>
                     </li>
                     <li className="mx-auto">
@@ -25,13 +31,13 @@ const Header = () => {
                     <li className={linkClass}>
                         <HeaderSearchBar />
                     </li>
-                    <li className={linkClass}>
-                        <Link href="/wishlist">
+                    <li className="hidden lg:block">
+                        <Link href="/wishlist" className={linkClass}>
                             Wishlist
                         </Link>
                     </li>
                     <li>
-                        <button data-cursor-label="Bag" className="py-1 px-2.5 text-white relative before:content-[''] before:absolute before:inset-0 before:bg-tertiary before:z-[-1] before:skew-x-[-20deg]">
+                        <button data-cursor-label="Bag" className="py-1 px-2.5 text-white relative whitespace-nowrap before:content-[''] before:absolute before:inset-0 before:bg-tertiary before:z-[-1] before:skew-x-[-20deg]">
                             BAG 0
                         </button>
                     </li>
