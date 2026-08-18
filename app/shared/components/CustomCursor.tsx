@@ -226,7 +226,7 @@ const Cursor = () => {
                     <span ref={pillRef} className="absolute block bg-page-dark/75 px-2 py-1 shadow-lg">
                         <span
                             ref={labelTextRef}
-                            className="block font-secondary text-[10px] uppercase leading-none tracking-[0.18em] text-white whitespace-nowrap"
+                            className="block font-secondary italic text-[10px] uppercase leading-none tracking-[0.18em] text-white whitespace-nowrap"
                         />
                     </span>
                 </div>
