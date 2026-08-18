@@ -1,11 +1,12 @@
 import Link from "next/link";
+import HeaderSearchBar from "./HeaderSearchBar";
 
 const Header = () => {
     const linkClass = "inline-block transition-colors duration-150 hover:text-tertiary";
 
     return (
         <header className="border-b border-slate-300">
-            <nav className="max-w-360 mx-auto px-4 py-2" >
+            <nav className="relative max-w-360 mx-auto px-4 py-2" >
                 <ul className="flex flex-wrap gap-10 items-center uppercase text-sm font-medium text-page-dark">
                     <li>
                         <Link href="/shop" className={linkClass}>Shop</Link>
@@ -22,7 +23,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className={linkClass}>
-                        Search
+                        <HeaderSearchBar />
                     </li>
                     <li className={linkClass}>
                         <Link href="/wishlist">

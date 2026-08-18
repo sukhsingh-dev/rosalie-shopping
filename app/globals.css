@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FFF5F6;
   --foreground: #171717;
   --header-height: 6.5rem;
   --primary: #f00a59;
@@ -20,13 +20,6 @@
   --color-tertiary: var(--tertiary);
   --font-main: var(--font-jost);
   --font-secondary: var(--font-anton);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html,
