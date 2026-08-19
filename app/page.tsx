@@ -4,6 +4,7 @@ import AboutSection from "./home/About";
 import VideoCollectionsSection from "./home/VideoCollections";
 import ProductList from "./shared/components/ProductList";
 import { PRODUCTS } from "./shared/mockData";
+import Collection from "./home/Collection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         productList={PRODUCTS}
       />
       <AboutSection />
+      <Collection />
       <VideoCollectionsSection />
     </main>
   );
