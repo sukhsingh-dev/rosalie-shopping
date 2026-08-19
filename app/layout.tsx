@@ -4,6 +4,7 @@ import Header from "./shared/components/Header";
 import CustomCursor from "./shared/components/CustomCursor";
 import Preloader from "./shared/components/Preloader";
 import "./globals.css";
+import Footer from "./shared/components/Footer";
 
 const anton = Anton({
   weight: "400",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <CustomCursor />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

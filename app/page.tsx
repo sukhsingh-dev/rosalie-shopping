@@ -20,6 +20,12 @@ export default function Home() {
       <AboutSection />
       <Collection />
       <VideoCollectionsSection />
+      <ProductList
+        title="Most Popular"
+        linkPath="/shop"
+        linkName="See All"
+        productList={PRODUCTS}
+      />
     </main>
   );
 }
