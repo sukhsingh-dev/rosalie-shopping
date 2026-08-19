@@ -1,6 +1,7 @@
 import HeroSection from "./home/Hero";
 import Marquee from "./home/Marquee";
 import AboutSection from "./home/About";
+import VideoCollectionsSection from "./home/VideoCollections";
 import ProductList from "./shared/components/ProductList";
 import { PRODUCTS } from "./shared/mockData";
 
@@ -16,6 +17,7 @@ export default function Home() {
         linkName="See All"
         productList={PRODUCTS}
       />
+      <VideoCollectionsSection />
     </main>
   );
 }
