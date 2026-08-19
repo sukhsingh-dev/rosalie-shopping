@@ -10,9 +10,6 @@ type Collection = {
     image: string;
 };
 
-/* Declared in the order the highlight travels — clockwise from the top-left
-   label — so the eye follows a circle around the product instead of jumping
-   across it. `column` keeps the layout readable from the data alone. */
 const COLLECTIONS: Collection[] = [
     { name: "Winter", column: "left", image: "/videos/vid-1-new.mp4" },
     { name: "Summer", column: "left", image: "/videos/vid-2-new.mp4" },
@@ -100,19 +97,9 @@ const VideoCollectionsSection = () => {
                     {columnLinks("left").map(renderLink)}
                 </div>
 
-                <div className="order-1 lg:order-0 relative w-60 lg:w-72 xl:w-90 aspect-9/14 shadow-lg rotate-6 -mx-5">
+                <div className="order-1 lg:order-0 relative w-60 lg:w-72 xl:w-90 aspect-9/14 shadow-lg rotate-6 -mx-5 overflow-hidden rounded-xs transform-gpu backface-hidden">
                     {COLLECTIONS.map((collection, index) => (
-                        // <Image
-                        //     key={collection.name}
-                        //     src={collection.image}
-                        //     alt={`${collection.name} collection`}
-                        //     fill
-                        //     sizes="(max-width: 1024px) 14rem, (max-width: 1280px) 18rem, 20rem"
-                        //     quality={100}
-                        //     className={`object-cover transition-opacity duration-700 ${index === activeIndex ? "opacity-100" : "opacity-0"
-                        //         }`}
-                        // />
-                        <video key={collection.name} autoPlay muted loop className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}>
+                        <video key={collection.name} autoPlay muted loop className={`absolute top-0 left-0 w-full h-full object-cover rounded-xs transition-opacity duration-700 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}>
                             <source src={collection.image} type="video/mp4" />
                         </video>
                     ))}
