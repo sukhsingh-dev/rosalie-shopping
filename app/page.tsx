@@ -10,13 +10,13 @@ export default function Home() {
     <main>
       <HeroSection />
       <Marquee />
-      <AboutSection />
       <ProductList
-        title="New Collection"
+        title="New Arrival"
         linkPath="/shop"
         linkName="See All"
         productList={PRODUCTS}
       />
+      <AboutSection />
       <VideoCollectionsSection />
     </main>
   );
