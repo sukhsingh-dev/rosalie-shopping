@@ -16,6 +16,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
   --color-page-dark: var(--page-dark);
   --color-tertiary: var(--tertiary);
   --font-main: var(--font-jost);

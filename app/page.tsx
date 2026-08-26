@@ -5,6 +5,7 @@ import VideoCollectionsSection from "./home/VideoCollections";
 import ProductList from "./shared/components/ProductList";
 import { PRODUCTS } from "./shared/mockData";
 import Collection from "./home/Collection";
+import NewsLetter from "./home/Newsletter";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         linkName="See All"
         productList={PRODUCTS}
       />
+      <NewsLetter />
     </main>
   );
 }
