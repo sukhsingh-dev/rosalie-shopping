@@ -5,7 +5,7 @@ import { RiArrowRightLongLine } from "react-icons/ri";
 export default function Collection() {
     return (
         <section className="max-w-360 mx-auto px-4 py-20">
-            <div className="flex flex-wrap justify-between items-end mb-6 lg:mb-12">
+            <div className="flex flex-wrap justify-between items-end mb-6 xl:mb-12">
                 <h2 className="font-secondary uppercase text-page-dark text-4xl sm:text-5xl lg:text-[46px] xl:text-[80px] leading-[0.95] tracking-tight">Collections</h2>
                 <Link href="/shop" className="ml-auto inline-flex items-center gap-2 text-sm rounded-[20px] py-1 pl-2.5 pr-1 text-secondary font-medium group hover:text-tertiary transition-colors duration-300">See All <RiArrowRightLongLine className="transition-transform duration-300 group-hover:translate-x-1" /></Link>
             </div>
@@ -53,8 +53,8 @@ const CollectionItem = ({ image, name, link, isFirst = false }: CollectionItemPr
                 height={isFirst ? 555 : 590}
                 className="col-span-full row-span-full transition-transform transition-300 ease-in group-hover:scale-[1.03]"
             />
-            <div className="col-span-full row-span-full p-6 h-full flex items-end bg-linear-to-t from-black/75 to-transparent relative z-1" >
-                <h3 className="font-secondary uppercase text-primary text-6xl group-hover:tracking-[2px] transition-all transition-300 ease-in" >{name}</h3>
+            <div className="col-span-full row-span-full p-2 sm:p-6 h-full flex items-end bg-linear-to-t from-black/75 to-transparent relative z-1" >
+                <h3 className="font-secondary uppercase text-primary text-2xl sm:text-4xl md:text-6xl group-hover:tracking-[2px] transition-all transition-300 ease-in" >{name}</h3>
             </div>
         </Link>
     )

@@ -57,7 +57,7 @@ const Marquee = () => {
                         {line2Items.map((item, idx) => (
                             <span
                                 key={`l2-a-${idx}`}
-                                className="inline-flex items-center gap-8 sm:gap-12 text-white font-secondary uppercase text-3xl sm:text-5xl tracking-wide group"
+                                className="inline-flex items-center gap-8 sm:gap-12 text-white font-secondary uppercase text-3xl lg:text-5xl tracking-wide group"
                             >
                                 <span>
                                     {item}
@@ -73,7 +73,7 @@ const Marquee = () => {
                         {line2Items.map((item, idx) => (
                             <span
                                 key={`l2-b-${idx}`}
-                                className="inline-flex items-center gap-8 sm:gap-12 text-white font-secondary uppercase text-3xl sm:text-5xl tracking-wide group"
+                                className="inline-flex items-center gap-8 sm:gap-12 text-white font-secondary uppercase text-3xl lg:text-5xl tracking-wide group"
                             >
                                 <span>
                                     {item}
