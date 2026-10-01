@@ -5,11 +5,11 @@ import Logo from "../shared/components/Logo";
 export default function NewsLetter() {
     return (
         <>
-            <section className="bg-[#FDE8EF]" >
+            <section className="bg-[#fce1ea]" >
                 <div className="max-w-360 mx-auto grid grid-cols-3 relative">
 
                     <div className="px-4 py-20 col-span-2 relative">
-                        <Image src="/images/newsletter-text.svg" alt="" width={181} height={200} quality={100} className="absolute top-[10%] right-0 opacity-60" />
+                        {/* <Image src="/images/newsletter-text.svg" alt="" width={181} height={200} quality={100} className="absolute top-[10%] right-0 opacity-60" /> */}
 
                         <h2 className="font-secondary uppercase text-page-dark text-4xl sm:text-5xl lg:text-[72px] tracking-tight">
                             Subscribe to <br />
@@ -52,7 +52,7 @@ export default function NewsLetter() {
                         </div>
                     </div>
                     <div className="flex items-end justify-end">
-                        <Image src="/images/newsletter.webp" alt="" width={450} height={537} quality={100} />
+                        <Image src="/images/nl-2.webp" alt="" width={480} height={576} quality={100} />
                     </div>
                 </div>
             </section>
