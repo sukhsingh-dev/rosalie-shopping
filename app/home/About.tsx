@@ -10,7 +10,7 @@ const AboutSection = () => {
                     <br />
                     <span className="whitespace-nowrap">OF CRAFT</span>
                 </h2>
-                <video autoPlay muted loop className="w-[600px] h-[550px] object-cover">
+                <video autoPlay muted loop className="w-150 h-138 object-cover">
                     <source src="/videos/av-3.mp4" type="video/mp4" />
                 </video>
                 <div>

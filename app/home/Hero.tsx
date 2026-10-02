@@ -15,8 +15,11 @@ const HeroSection = () => {
                     src="/images/hero-new.webp"
                     fetchPriority="high"
                     loading="eager"
-                    className="mx-auto sm:max-md:max-w-120"
+                    className="mx-auto sm:max-md:max-w-120 pointer-none"
                 />
+                {/* <video loop autoPlay muted>
+                    <source src="/videos/hero-2.mp4" type="video/mp4" />
+                </video> */}
 
                 <div className="md:absolute bottom-20 -right-10 md:-right-30 lg:-right-1/3 font-secondary text-secondary text-[32px] sm:text-[48px] md:text-[52px] uppercase leading-[1.2] w-max">
                     comfort &<br className="sm:hidden md:block" /> contemporary
