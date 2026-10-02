@@ -6,14 +6,13 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="bg-[#121214] text-white/90 relative">
-            <Image alt="" src="/images/footer-dec.webp" width={176} height={300} quality={100} className="absolute top-10 right-0 pointer-none:" />
-            <div className="max-w-360 mx-auto px-4 pb-10 pt-15 relative">
-                <div className="pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
-                    <div className="lg:col-span-2">
-                        {/* <div className="font-secondary text-6xl mb-5">ROSALIE</div> */}
+            <Image alt="" src="/images/footer-dec.webp" width={176} height={300} quality={100} className="absolute bottom-30 lg:top-10 right-0 pointer-none:" />
+            <div className="max-w-360 mx-auto px-4 pb-10 pt-5 sm:pt-15 relative">
+                <div className="pb-10 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-10">
+                    <div className="col-span-2 sm:col-span-4 lg:col-end-3">
                         <Logo
                             logoFill="#ffffff"
-                            logoClass="w-75 h-auto opacity-90"
+                            logoClass="w-50 sm:w-75 h-auto opacity-90"
                         />
                         <p className="text-sm leading-relaxed">Designed in UK, made for every day.<br /> Premium comfort, cut with care.</p>
                         <div className="mt-5 flex gap-5">
@@ -117,16 +116,9 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-
-
-
                 </div>
-                {/* <Logo
-                    logoFill="#90a1b9"
-                    logoClass="w-full h-auto px-20"
-                /> */}
-                <div className="border-t border-white/10 flex justify-between pt-5 px-4 text-xs tracking-[0.5px]" >
-                    <p>© {new Date().getFullYear()} Rosalie Fashion. All Rights Reserved.</p>
+                <div className="border-t border-white/10 flex flex-wrap justify-between pt-5 xl:px-4 text-xs tracking-[0.5px]" >
+                    <p className="w-full mb-5 sm:w-fit sm:mb-0">© {new Date().getFullYear()} Rosalie Fashion. All Rights Reserved.</p>
                     <div className="flex gap-10">
                         <Link href="/privacy" className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-tertiary group">Privacy Policy <RiArrowRightUpLongLine className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" /></Link>
                         <Link href="/terms" className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-tertiary group">Terms of Use <RiArrowRightUpLongLine className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" /></Link>

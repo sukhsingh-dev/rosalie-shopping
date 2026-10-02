@@ -4,7 +4,7 @@ import { RiArrowRightLongLine } from "react-icons/ri";
 
 export default function Collection() {
     return (
-        <section className="max-w-360 mx-auto px-4 py-20">
+        <section className="max-w-360 mx-auto px-4 py-10 xl:py-20">
             <div className="flex flex-wrap justify-between items-end mb-6 xl:mb-12">
                 <h2 className="font-secondary uppercase text-page-dark text-4xl sm:text-5xl lg:text-[46px] xl:text-[80px] leading-[0.95] tracking-tight">Collections</h2>
                 <Link href="/shop" className="ml-auto inline-flex items-center gap-2 text-sm rounded-[20px] py-1 pl-2.5 pr-1 text-secondary font-medium group hover:text-tertiary transition-colors duration-300">See All <RiArrowRightLongLine className="transition-transform duration-300 group-hover:translate-x-1" /></Link>

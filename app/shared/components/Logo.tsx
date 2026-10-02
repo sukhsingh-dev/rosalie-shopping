@@ -3,7 +3,7 @@ type LogoTypes = {
     logoFill?: string
 }
 
-export default function Logo({ logoClass = "w-22.5 h-auto sm:w-37.5", logoFill = "#242424" }: LogoTypes) {
+export default function Logo({ logoClass = "w-22.5 h-auto lg:w-37.5", logoFill = "#242424" }: LogoTypes) {
     return (
         <svg viewBox="0 0 1741 689" width="1741" height="689" className={logoClass}>
             {/* <defs>

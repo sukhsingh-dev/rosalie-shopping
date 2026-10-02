@@ -47,7 +47,7 @@ const Marquee = () => {
             ref={containerRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="w-full py-4 overflow-hidden select-none"
+            className="w-full overflow-hidden select-none"
             aria-label="Brand highlights marquee"
         >
             <div className="overflow-hidden whitespace-nowrap flex w-full py-4 bg-primary shadow-md">
