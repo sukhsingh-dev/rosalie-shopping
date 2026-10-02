@@ -31,7 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${jost.variable} ${anton.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-background">
+      <body className="min-h-full bg-white">
         <Preloader />
         <CustomCursor />
         <Header />

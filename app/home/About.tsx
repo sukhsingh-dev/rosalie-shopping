@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightUpLongLine } from "react-icons/ri";
 
@@ -11,15 +10,9 @@ const AboutSection = () => {
                     <br />
                     <span className="whitespace-nowrap">OF CRAFT</span>
                 </h2>
-
-                <Image
-                    src="/images/about.webp"
-                    alt="Rosalie Parisian Elegance"
-                    width={600}
-                    height={400}
-                    className="shadow-lg object-cover"
-                />
-
+                <video autoPlay muted loop className="w-[600px] h-[550px] object-cover">
+                    <source src="/videos/av-3.mp4" type="video/mp4" />
+                </video>
                 <div>
                     <h3 className="font-secondary uppercase text-primary text-4xl sm:text-5xl lg:text-[46px] xl:text-[54px] leading-[0.95] tracking-tight">
                         Crafting Premium Comfort for the Modern Wardrobe.
