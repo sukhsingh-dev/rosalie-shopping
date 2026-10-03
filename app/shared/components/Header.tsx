@@ -1,17 +1,16 @@
 import Link from "next/link";
 import HeaderSearchBar from "./HeaderSearchBar";
+import HeaderMenu from "./HeaderMenu";
 import Logo from "./Logo";
-import { RiAccountCircle2Line, RiHeart2Line, RiMenu2Fill, RiShoppingBag4Line, RiUser5Line } from "react-icons/ri";
+import { RiHeart2Line, RiShoppingBag4Line, RiUser5Line } from "react-icons/ri";
 
 const Header = () => {
     return (
         <header className="border-b border-slate-300">
             <nav className="relative max-w-360 mx-auto px-4 py-2" >
                 <ul className="flex flex-wrap gap-3 lg:gap-10 items-center uppercase text-sm font-medium text-page-dark sm:justify-between">
-                    <li className="flex items-center gap-3 hover:text-tertiary transition-colors duration-150 sm:min-w-[165px] md:min-w-[213px]">
-                        <button data-cursor-label="Open Menu" className="mt-1">
-                            <RiMenu2Fill size={20} />
-                        </button>
+                    <li className="flex items-center gap-3 hover:text-tertiary transition-colors duration-150 sm:min-w-41.25 md:min-w-53.25">
+                        <HeaderMenu />
                     </li>
                     <li>
                         <Link href="/" data-cursor-label="Home Page">
