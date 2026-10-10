@@ -1,61 +1,60 @@
 import Link from "next/link";
 import Image from "next/image";
-import { RiArrowRightLongLine } from "react-icons/ri";
+import { RiArrowRightLongLine, RiArrowRightUpLongLine } from "react-icons/ri";
 
 export default function Collection() {
     return (
-        <section className="max-w-360 mx-auto px-4 py-10 xl:py-20">
+        <section className="max-w-360 mx-auto px-4 py-5 md:py-10">
             <div className="flex flex-wrap justify-between items-end mb-6 xl:mb-12">
                 <h2 className="font-secondary uppercase text-page-dark text-4xl sm:text-5xl lg:text-[46px] xl:text-[80px] leading-[0.95] tracking-tight">Collections</h2>
                 <Link href="/shop" className="ml-auto inline-flex items-center gap-2 text-sm rounded-[20px] py-1 pl-2.5 pr-1 text-secondary font-medium group hover:text-tertiary transition-colors duration-300">See All <RiArrowRightLongLine className="transition-transform duration-300 group-hover:translate-x-1" /></Link>
             </div>
-            <div className="grid grid-cols-3">
-                <CollectionItem
-                    image="/images/collection-1.webp"
-                    name="Daily Classic"
-                    link="/shop"
-                    isFirst
-                />
-                <CollectionItem
-                    image="/images/collection-2.webp"
-                    name="Men"
-                    link="/shop"
-                />
-                <CollectionItem
-                    image="/images/collection-3.webp"
-                    name="Women"
-                    link="/shop"
-                />
-                <CollectionItem
-                    image="/images/collection-4.webp"
-                    name="Featured"
-                    link="/shop"
-                />
+            <div className="grid sm:grid-cols-2 gap-3 lg:gap-5">
+                <Link href="/shop" className="grid max-md:min-h-69 overflow-hidden">
+                    <Image
+                        width={694}
+                        height={440}
+                        alt=""
+                        src="/images/collection-men.webp"
+                        quality={90}
+                        className="col-span-full row-span-full h-full object-cover object-right"
+                    />
+                    <div className="col-span-full row-span-full flex flex-col items-start p-4 lg:p-10">
+                        <h3 className="text-secondary uppercase font-secondary text-4xl lg:text-6xl">Men</h3>
+                        <p className="text-page-dark/75 max-w-[60%] my-2 text-sm lg:text-base font-medium">Discover the ultimate in off-duty style with our exclusive collection of men's hoodies and t-shirts.</p>
+                        <span
+                            data-cursor-label="Discover"
+                            className="mt-auto inline-flex items-center gap-3 bg-primary text-white uppercase text-xs font-semibold px-6 py-3.5 tracking-widest transition-all duration-300 hover:bg-tertiary group"
+                        >
+                            <span>Check Now</span>
+                            <RiArrowRightUpLongLine className="inline-flex -mt-0.5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                        </span>
+                    </div>
+
+                </Link>
+                <Link href="/shop" className="grid max-md:min-h-69 overflow-hidden">
+                    <Image
+                        width={694}
+                        height={440}
+                        alt=""
+                        src="/images/collection-women.webp"
+                        quality={90}
+                        className="col-span-full row-span-full h-full object-cover object-right"
+                    />
+                    <div className="col-span-full row-span-full flex flex-col items-start p-4 lg:p-10">
+                        <h3 className="text-secondary uppercase font-secondary text-4xl lg:text-6xl">Women</h3>
+                        <p className="text-page-dark/75 max-w-[70%] lg:max-w-[60%] my-2 text-sm lg:text-base font-medium">Elevate your casual wardrobe with our thoughtfully designed collection of women's hoodies and t-shirts.</p>
+                        <span
+                            data-cursor-label="Discover"
+                            className="mt-auto inline-flex items-center gap-3 bg-primary text-white uppercase text-xs font-semibold px-6 py-3.5 tracking-widest transition-all duration-300 hover:bg-tertiary group"
+                        >
+                            <span>Check Now</span>
+                            <RiArrowRightUpLongLine className="inline-flex -mt-0.5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                        </span>
+                    </div>
+
+                </Link>
             </div>
         </section>
-    )
-}
-
-type CollectionItemProps = {
-    image: string;
-    name: string;
-    link: string;
-    isFirst?: boolean;
-}
-
-const CollectionItem = ({ image, name, link, isFirst = false }: CollectionItemProps) => {
-    return (
-        <Link href={link} className={`border border-slate-300 grid group overflow-hidden ${isFirst ? "col-span-3" : ""}`}>
-            <Image
-                alt=""
-                src={image}
-                width={isFirst ? 1408 : 495}
-                height={isFirst ? 555 : 590}
-                className="col-span-full row-span-full transition-transform transition-300 ease-in group-hover:scale-[1.03]"
-            />
-            <div className="col-span-full row-span-full p-2 sm:p-6 h-full flex items-end bg-linear-to-t from-black/75 to-transparent relative z-1" >
-                <h3 className="font-secondary uppercase text-primary text-2xl sm:text-4xl md:text-6xl group-hover:tracking-[2px] transition-all transition-300 ease-in" >{name}</h3>
-            </div>
-        </Link>
     )
 }

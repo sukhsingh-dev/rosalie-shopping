@@ -6,13 +6,13 @@ const HeroSection = () => {
     return (
         <section className="max-w-360 mx-auto px-4 py-8">
             <h1 className="text-primary font-secondary font-bold text-[60px] sm:text-[66px] lg:text-[90px] xl:text-[120px] text-center uppercase leading-[1.1]">Elevate Your Everyday</h1>
-            <div className="md:max-w-120 lg:max-w-140 xl:max-w-165 mx-auto -mt-15 sm:-mt-10 xl:-mt-20 relative">
+            <div className="max-w-100 md:max-w-120 lg:max-w-140 xl:max-w-150 mx-auto -mt-8 xl:-mt-20 relative">
                 <Image
                     width={660}
                     height={537}
                     quality={100}
                     alt=""
-                    src="/images/hero-new.webp"
+                    src="/images/hero-4.webp"
                     fetchPriority="high"
                     loading="eager"
                     className="mx-auto sm:max-md:max-w-120 pointer-none"
@@ -21,10 +21,10 @@ const HeroSection = () => {
                     <source src="/videos/hero-2.mp4" type="video/mp4" />
                 </video> */}
 
-                <div className="md:absolute bottom-20 -right-10 md:-right-30 lg:-right-1/3 font-secondary text-secondary text-[32px] sm:text-[48px] md:text-[52px] uppercase leading-[1.2] md:w-max my-2 text-center md:text-left">
+                <div className="md:absolute bottom-10 -right-10 md:-right-30 lg:-right-1/3 font-secondary text-secondary text-[32px] sm:text-[48px] md:text-[52px] uppercase leading-[1.2] md:w-max my-2 text-center md:text-left">
                     comfort &<br className="hidden md:block" /> contemporary
                 </div>
-                <div className="md:absolute bottom-20 md:left-[-24%] lg:-left-1/3  md:max-w-90 text-center md:text-left">
+                <div className="md:absolute bottom-10 md:left-[-24%] lg:left-[-39%]  md:max-w-90 text-center md:text-left">
                     <p className="text-[13px] sm:text-14 mix-blend-difference text-white/70 font-normal tracking-wider leading-relaxed">
                         We craft durable, ultra-soft hoodies and breathable <br />t-shirts designed to keep you looking effortlessly stylish, whatever the weather.
                     </p>
