@@ -14,9 +14,11 @@ export default function Collection() {
                     <Image
                         width={694}
                         height={440}
-                        alt=""
+                        alt="Men's collection - hoodies and t-shirts"
                         src="/images/collection-men.webp"
-                        quality={90}
+                        quality={75}
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, 50vw"
                         className="col-span-full row-span-full h-full object-cover object-right"
                     />
                     <div className="col-span-full row-span-full flex flex-col items-start p-4 lg:p-10">
@@ -36,9 +38,11 @@ export default function Collection() {
                     <Image
                         width={694}
                         height={440}
-                        alt=""
+                        alt="Women's collection - hoodies and t-shirts"
                         src="/images/collection-women.webp"
-                        quality={90}
+                        quality={75}
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, 50vw"
                         className="col-span-full row-span-full h-full object-cover object-right"
                     />
                     <div className="col-span-full row-span-full flex flex-col items-start p-4 lg:p-10">

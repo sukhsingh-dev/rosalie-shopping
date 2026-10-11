@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="bg-[#121214] text-white/90 relative">
-            <Image alt="" src="/images/footer-dec.webp" width={176} height={300} quality={100} className="absolute bottom-30 lg:top-10 right-0 pointer-none:" />
+            <Image alt="" src="/images/footer-dec.webp" width={176} height={300} quality={75} loading="lazy" sizes="176px" className="absolute bottom-30 lg:top-10 right-0 pointer-events-none" />
             <div className="max-w-360 mx-auto px-4 pb-10 pt-5 sm:pt-15 relative">
                 <div className="pb-10 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-10">
                     <div className="col-span-2 sm:col-span-4 lg:col-end-3">
@@ -17,16 +17,16 @@ export default function Footer() {
                         <p className="text-sm leading-relaxed">Designed in UK, made for every day.<br /> Premium comfort, cut with care.</p>
                         <div className="mt-5 flex gap-5">
                             {/* ri social icons */}
-                            <a target="_blank" href="#" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
+                            <a target="_blank" href="#" aria-label="Connect on Whatsapp" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
                                 <RiWhatsappFill size={20} />
                             </a>
-                            <a target="_blank" href="#" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
+                            <a target="_blank" href="#" aria-label="Follow us on Instagram" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
                                 <RiInstagramLine size={20} />
                             </a>
-                            <a target="_blank" href="#" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
+                            <a target="_blank" href="#" aria-label="Like us on Facebook" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
                                 <RiFacebookFill size={20} />
                             </a>
-                            <a target="_blank" href="#" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
+                            <a target="_blank" href="#" aria-label="Subscribe us on Youtube" className="border border-white rounded-full p-2 inline-flex items-center transition-colors duration-300 hover:bg-white hover:text-tertiary">
                                 <RiYoutubeFill size={20} />
                             </a>
                         </div>

@@ -10,8 +10,8 @@ const AboutSection = () => {
                     <br />
                     <span className="whitespace-nowrap">OF CRAFT</span>
                 </h2>
-                <video autoPlay muted loop className="lg:w-150 h-90 sm:h-110 md:h-140 lg:h-138 md:w-full object-cover absolute top-0 left-0 lg:relative">
-                    <source src="/videos/av-3.mp4" type="video/mp4" />
+                <video autoPlay muted loop playsInline preload="metadata" className="lg:w-150 h-90 sm:h-110 md:h-140 lg:h-138 md:w-full object-cover absolute top-0 left-0 lg:relative">
+                    <source src="/videos/av-4.mp4" type="video/mp4" />
                 </video>
                 <div>
                     <h3 className="font-secondary uppercase text-primary text-4xl sm:text-5xl lg:text-[46px] xl:text-[54px] md:leading-[0.95] md:tracking-tight">

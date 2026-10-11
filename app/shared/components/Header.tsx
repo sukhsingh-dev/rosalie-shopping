@@ -13,22 +13,22 @@ const Header = () => {
                         <HeaderMenu />
                     </li>
                     <li>
-                        <Link href="/" data-cursor-label="Home Page">
+                        <Link href="/" data-cursor-label="Home Page" aria-label="Home Page">
                             <Logo />
                         </Link>
                     </li>
-                    <li className="flex gap-4 md:gap-8 ml-auto sm:ml-0">
+                    <li className="flex items-center gap-4 md:gap-8 ml-auto sm:ml-0">
                         <HeaderSearchBar />
-                        <button data-cursor-label="Login to Account">
+                        <Link href="/account" aria-label="Login to Account" data-cursor-label="Login to Account">
                             <RiUser5Line size={20} />
-                        </button>
-                        <button data-cursor-label="Check Wishlist">
+                        </Link>
+                        <Link href="/wishlist" aria-label="Check Wishlist" data-cursor-label="Check Wishlist">
                             <RiHeart2Line size={20} />
-                        </button>
-                        <button data-cursor-label="Check Bag" className="py-1 px-2.5 text-white relative before:content-[''] before:absolute before:inset-0 before:bg-tertiary before:z-[-1] before:skew-x-[-20deg] flex gap-2 items-center">
+                        </Link>
+                        <Link href="/bag" aria-label="Check Bag" data-cursor-label="Check Bag" className="py-1 px-2.5 text-white relative before:content-[''] before:absolute before:inset-0 before:bg-tertiary before:z-[-1] before:skew-x-[-20deg] flex gap-2 items-center">
                             <RiShoppingBag4Line size={20} />
                             <span>0</span>
-                        </button>
+                        </Link>
                     </li>
                 </ul>
             </nav>

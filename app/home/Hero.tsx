@@ -6,16 +6,17 @@ const HeroSection = () => {
     return (
         <section className="max-w-360 mx-auto px-4 py-8">
             <h1 className="text-primary font-secondary font-bold text-[60px] sm:text-[66px] lg:text-[90px] xl:text-[120px] text-center uppercase leading-[1.1]">Elevate Your Everyday</h1>
-            <div className="max-w-100 md:max-w-120 lg:max-w-140 xl:max-w-150 mx-auto -mt-8 xl:-mt-20 relative">
+            <div className="max-w-100 md:max-w-120 lg:max-w-140 xl:max-w-150 mx-auto -mt-8 xl:-mt-20 relative aspect-660/537">
                 <Image
                     width={660}
                     height={537}
-                    quality={100}
-                    alt=""
+                    quality={90}
+                    alt="Rosalie streetwear essentials - Elevate Your Everyday"
                     src="/images/hero-4.webp"
+                    priority
                     fetchPriority="high"
-                    loading="eager"
-                    className="mx-auto sm:max-md:max-w-120 pointer-none"
+                    sizes="(max-width: 640px) 380px, (max-width: 1024px) 480px, 600px"
+                    className="mx-auto sm:max-md:max-w-120 pointer-none w-full h-auto"
                 />
                 {/* <video loop autoPlay muted>
                     <source src="/videos/hero-2.mp4" type="video/mp4" />

@@ -49,7 +49,7 @@ export default function NewsLetter() {
                         </div>
                     </div>
                     <div className="flex items-end justify-end absolute bottom-0 opacity-30 sm:relative sm:opacity-100">
-                        <Image src="/images/nl-2.webp" alt="" width={480} height={576} quality={100} />
+                        <Image src="/images/nl-2.webp" alt="Newsletter promotional image" width={480} height={576} quality={90} loading="lazy" sizes="(max-width: 640px) 100vw, 33vw" />
                     </div>
                 </div>
             </section>

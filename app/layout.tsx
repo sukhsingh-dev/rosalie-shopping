@@ -8,11 +8,17 @@ import Footer from "./shared/components/Footer";
 
 const anton = Anton({
   weight: "400",
+  subsets: ["latin"],
+  display: "swap",
   variable: "--font-anton",
+  fallback: ["Impact", "Arial Narrow", "sans-serif"],
 });
 
 const jost = Jost({
+  subsets: ["latin"],
+  display: "swap",
   variable: "--font-jost",
+  fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
 

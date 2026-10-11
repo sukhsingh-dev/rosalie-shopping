@@ -7,13 +7,14 @@ const ProductCard = ({ productInfo }: { productInfo: Product }) => {
     return (
         <Link href="/product-details" data-cursor-label="View" className="grid grid-rows-[auto_1fr] group/card border border-slate-300 overflow-hidden">
             <div className="overflow-hidden w-full relative">
-                <button data-cursor-label="Add to Wishlist" className="absolute right-2 top-2 md:right-4 md:top-4 z-1 text-tertiary [@media(hover:hover)]:opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"><RiHeart2Line size={24} className="w-4 h-4 sm:w-6 sm:h-6" /></button>
+                <button aria-label="Add to Wishlist" data-cursor-label="Add to Wishlist" className="absolute right-2 top-2 md:right-4 md:top-4 z-1 text-tertiary [@media(hover:hover)]:opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"><RiHeart2Line size={24} className="w-6 h-6" /></button>
                 <Image
                     src={productInfo.image}
-                    alt="product image"
+                    alt={productInfo.title}
                     width={250}
                     height={275}
-                    quality={100}
+                    quality={75}
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     className="transition-transform duration-300 group-hover/card:scale-[1.05] object-cover w-full"
                 />
             </div>
