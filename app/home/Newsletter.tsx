@@ -23,7 +23,7 @@ export default function NewsLetter() {
                         </form>
                         <div className="grid lg:grid-cols-3 gap-5" >
                             <div className="flex gap-4">
-                                <RiPriceTag3Line size={40} className="text-secondary/60" />
+                                <RiPriceTag3Line size={40} className="text-primary/60" />
                                 <div className="">
                                     <div className="text-black uppercase font-medium">Exculsive Offer</div>
                                     <div className="text-slate-600 text-[14px]">For our subscribers</div>
@@ -31,7 +31,7 @@ export default function NewsLetter() {
                             </div>
 
                             <div className="flex gap-4">
-                                <RiGiftLine size={40} className="text-secondary/60" />
+                                <RiGiftLine size={40} className="text-primary/60" />
                                 <div className="">
                                     <div className="text-black uppercase font-medium">New Arrivals</div>
                                     <div className="text-slate-600 text-[14px]">Strait to your inbox</div>
@@ -39,7 +39,7 @@ export default function NewsLetter() {
                             </div>
 
                             <div className="flex gap-4">
-                                <RiHeart2Line size={40} className="text-secondary/60" />
+                                <RiHeart2Line size={40} className="text-primary/60" />
                                 <div className="">
                                     <div className="text-black uppercase font-medium">Style insporation</div>
                                     <div className="text-slate-600 text-[14px]">Tips, Trends and more</div>

@@ -22,7 +22,7 @@ const HeroSection = () => {
                     <source src="/videos/hero-2.mp4" type="video/mp4" />
                 </video> */}
 
-                <div className="md:absolute bottom-10 -right-10 md:-right-30 lg:-right-1/3 font-secondary text-secondary text-[32px] sm:text-[48px] md:text-[52px] uppercase leading-[1.2] md:w-max my-2 text-center md:text-left">
+                <div className="md:absolute bottom-10 -right-10 lg:-right-60 xl:-right-65 font-secondary text-white mix-blend-difference text-[32px] sm:text-[48px] xl:text-[52px] uppercase leading-[1.2] md:w-max my-2 text-center md:text-left md:hidden lg:block">
                     comfort &<br className="hidden md:block" /> contemporary
                 </div>
                 <div className="md:absolute bottom-10 md:left-[-24%] lg:left-[-39%]  md:max-w-90 text-center md:text-left">
